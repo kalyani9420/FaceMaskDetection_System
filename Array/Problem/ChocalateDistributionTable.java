@@ -3,26 +3,29 @@ package Array.Problem;
 import java.util.Arrays;
 import java.util.Scanner;
 
+// Given an array of n integers where each value represents the number of chocolates in a packet. Each packet can have a variable number of chocolates. There are m students, the task is to distribute chocolate packets such that: 
+
+// Each student gets one packet.
+// The difference between the number of chocolates in the packet with maximum chocolates and packet with minimum chocolates given to the students is minimum.
+// Examples:
+
+// Input : arr[] = {7, 3, 2, 4, 9, 12, 56} , m = 3 
+// Output: Minimum Difference is 2 
+// Explanation:
+// We have seven packets of chocolates and 
+// we need to pick three packets for 3 students 
+// If we pick 2, 3 and 4, we get the minimum 
+// difference between maximum and minimum packet 
+// sizes.
 public class ChocalateDistributionTable {
 
     public void distribution(int arr[] , int size ,  int m) {
-        // If there are no chocolates or
-        // number of students is 0
         if (m == 0 || size == 0)
             return;
-            
-        // To store the minimum difference 
         int answer = Integer.MAX_VALUE;
-        
-        // Sort the given packets   
+  
         Arrays.sort(arr);
         
-        // Find the subarray of size m
-        // such that difference between
-        // last (maximum in case of
-        // sorted) and first (minimum in
-        // case of sorted) elements of
-        // subarray is minimum.
         for (int i=0; i<=size-m; i++)
         {
             int minimumWindow = arr[i];

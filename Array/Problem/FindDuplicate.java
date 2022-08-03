@@ -1,5 +1,6 @@
 package Array.Problem;
 
+//Find duplicate and return yes
 public class FindDuplicate {
 
     public static void main(String[] args) {

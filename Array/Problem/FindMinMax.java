@@ -1,5 +1,6 @@
 package Array.Problem;
 
+// Maximum and minimum of an array using minimum number of comparisons
 public class FindMinMax {
 
     public String  minMax(int arr[]){
